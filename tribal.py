@@ -3,7 +3,7 @@
 # Github: Demon-Cyber-404
 import os,sys,time,json,random,re,string,platform,base64,uuid
 os.system("git pull")
-import requests as ress
+#import requests as ress
 from datetime import date
 from datetime import datetime
 from time import sleep
