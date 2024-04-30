@@ -111,4 +111,4 @@ class Main:
 		print("\033[0;90m ><><><><><><><><><><><><><><><><><><>><")
 		print('\x1b[1;32m [1]\x1b[1;33m Cloning Old Idz CRACK ')
 		print('\x1b[1;32m [2] \x1b[1;32mCONTACT ME ON FACEBOOK')
-		print(' \x1b[1;32m[3] \x1b[1;32mSUBSCRI
+		print(' \x1b[1;32m[3] \x1b[1;32mSUBSCRIBE')
